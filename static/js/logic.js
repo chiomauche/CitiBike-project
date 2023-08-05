@@ -30,7 +30,7 @@ function createMap(bikeStations) {
 }
 
 function createMarkers(response) {
-
+   console.log(response)
   // Pull the "stations" property from response.data.
   let stations = response.data.stations;
 
@@ -55,4 +55,5 @@ function createMarkers(response) {
 
 
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json").then(createMarkers);
+//d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json").then(createMarkers);
+d3.json("station.json").then(createMarkers);
